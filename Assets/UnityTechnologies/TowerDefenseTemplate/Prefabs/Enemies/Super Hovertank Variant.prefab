@@ -67,5 +67,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114348681867643788, guid: 60000d22132204baa9db73f0b0c0d987,
+        type: 3}
+      propertyPath: initialPoolCapacity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195793231520020778, guid: 60000d22132204baa9db73f0b0c0d987,
+        type: 3}
+      propertyPath: m_Speed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60000d22132204baa9db73f0b0c0d987, type: 3}
