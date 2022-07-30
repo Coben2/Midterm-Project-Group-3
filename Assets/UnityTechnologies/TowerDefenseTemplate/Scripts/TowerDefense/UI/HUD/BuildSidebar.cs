@@ -1,6 +1,8 @@
-﻿using TowerDefense.Level;
+﻿using Core.Economy;
+using TowerDefense.Level;
 using TowerDefense.Towers;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TowerDefense.UI.HUD
 {
@@ -9,6 +11,7 @@ namespace TowerDefense.UI.HUD
 	/// </summary>
 	public class BuildSidebar : MonoBehaviour
 	{
+		
 		/// <summary>
 		/// The prefab spawned for each button
 		/// </summary>
@@ -25,11 +28,13 @@ namespace TowerDefense.UI.HUD
 			}
 			foreach (Tower tower in LevelManager.instance.towerLibrary)
 			{
+				
 				TowerSpawnButton button = Instantiate(towerSpawnButton, transform);
 				button.InitializeButton(tower);
 				button.buttonTapped += OnButtonTapped;
 				button.draggedOff += OnButtonDraggedOff;
 			}
+			
 		}
 
 		/// <summary>
@@ -87,12 +92,43 @@ namespace TowerDefense.UI.HUD
 		/// Debug button to add currency
 		/// </summary>
 		/// <param name="amount">How much to add</param>
+
 		public void AddCurrency(int amount)
 		{
+
+			//if levelManager exists and player currency = 20 then PowerUp.enabled
 			if (LevelManager.instanceExists)
 			{
 				LevelManager.instance.currency.AddCurrency(amount);
 			}
+	
 		}
+
+
+		// create new script attach to Debug bar
+		// attach UpdatePowerUPButton - should then turn on/off the interactable
+		// logic for - if player currency = 20, if AddCurrency clicked initiate cooldown period until playerCurrency = 0.
+
+		//void UpdatePowerUPButton()
+		//{
+		//	m_Currency = LevelManager.instance.currency;
+
+		//	if (m_Currency == null)
+		//	{
+		//		return;
+		//	}
+
+		//	// Enable button
+		//	if (m_Currency.CanAfford(powerUpCost) && !powerUp.interactable)
+		//	{
+		//		powerUp.interactable = true;
+		//	}
+		//	else if (!m_Currency.CanAfford(powerUpCost) && powerUp.interactable)
+		//	{
+		//		powerUp.interactable = false;
+
+		//	}
+		//}
+
 	}
 }
