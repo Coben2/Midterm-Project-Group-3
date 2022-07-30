@@ -264,6 +264,7 @@
     <Compile Include="Assets/UnityTechnologies/TowerDefenseTemplate/Scripts/Core/Health/DamageableBehaviour.cs" />
     <Compile Include="Assets/UnityTechnologies/TowerDefenseTemplate/Scripts/Core/Input/TouchInfo.cs" />
     <Compile Include="Assets/UnityTechnologies/TowerDefenseTemplate/PostProcessing/Runtime/Models/DitheringModel.cs" />
+    <Compile Include="Assets/UnityTechnologies/TowerDefenseTemplate/Scripts/TowerDefense/UI/HUD/PowerUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/UnityTechnologies/TowerDefenseTemplate/PostProcessing/Resources/Shaders/ScreenSpaceReflection.shader" />
