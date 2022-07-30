@@ -5,51 +5,139 @@ using TowerDefense.Level;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PowerUp : MonoBehaviour
 {
 	public Button powerUpButton;
 
 	Currency m_Currency;
 
-	[SerializeField] private int powerUpCost = 12;
+	public int powerUpCost = 12;
 
+    public int powerUpResetCost = 12;
+
+    public int powerUpReset = 100;
+
+    public int newPowerUpCost = 12;
+
+   
+
+   
 
     private void Start()
     {
 		powerUpButton.interactable = false;
+        powerUpButton.onClick.AddListener(powerUpButton_onClick);
     }
 
 
     // Update is called once per frame
     void Update()
     {
-		//if (LevelManager.instanceExists)
-		//{
-		//	m_Currency = LevelManager.instance.currency;
-
-		//}
 		m_Currency = LevelManager.instance.currency;
-		UpdatePowerUPButton();
+     
+        powerUpButton.onClick.AddListener(() => powerUpButton_onClick());
+        UpdatePowerUPButton();
 
 	}
 
+    void powerUpButton_onClick()
+    {
+        //powerUpButton.onClick.AddListener(() => powerUpButton_onClick());
+            powerUpButton.interactable = false;
 
-	// create new script attach to Debug bar
-	// attach UpdatePowerUPButton - should then turn on/off the interactable
-	// logic for - if player currency = 20, if AddCurrency clicked initiate cooldown period until playerCurrency = 0.
+            powerUpCost = powerUpReset;
 
-	void UpdatePowerUPButton()
-	{
-		
-		// Enable button
-		if (m_Currency.currentCurrency >= powerUpCost && !powerUpButton.interactable)
-		{
-			powerUpButton.interactable = true;
-		}
-		else if (m_Currency.currentCurrency < powerUpCost && powerUpButton.interactable)
-		{
-			powerUpButton.interactable = false;
+            Debug.Log("Button clicked");
+            Debug.Log(powerUpCost);
+        
+    }
 
-		}
-	}
+    void UpdatePowerUPButton()
+    {
+        {
+            // Enable button
+                if (m_Currency.currentCurrency >= powerUpCost && !powerUpButton.interactable)
+                {
+                    powerUpButton.interactable = true;
+                }
+
+                else if (m_Currency.currentCurrency == powerUpResetCost)
+                {
+                    powerUpCost = newPowerUpCost;
+                }
+               
+        }
+
+    }
 }
+
+
+    // Co-routine? - logic for - if powerUP used, then updatePowerUPButton is deactivated until currency = 0.
+
+    //  IEnumerator PowerUpCoolDown()
+    //  {
+    //      while (!powerUpCoolDownEnabled)
+    //      {
+    //	if (m_Currency.currentCurrency >= powerUpCost && !powerUpButton.interactable)
+    //	{
+    //		powerUpButton.interactable = true;
+    //	}
+
+    //	else if (m_Currency.currentCurrency != powerUpRestart && powerUpButton.interactable)
+    //	{
+    //		powerUpButton.interactable = false;
+    //	}
+
+    //	yield return new WaitUntil(() => powerUpButton.interactable == false);
+
+
+    //}
+
+    //  }
+
+    //void ResetPowerUpButton()
+    //   {
+    //	if(m_Currency.currentCurrency == 0)
+    //       {
+    //		powerUpCoolDownEnabled = false;
+    //		powerUpEnabled = false;
+    //       }
+    //	else
+    //       {
+    //		powerUpCoolDownEnabled = true;
+    //       }
+    //   }
+
+
+    //private void Start()
+    //{
+    //	powerUpButton.interactable = false;
+    //}
+
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //	m_Currency = LevelManager.instance.currency;
+    //	UpdatePowerUPButton();
+
+    //}
+
+    //// Co-routine? - logic for - if powerUP used, then updatePowerUPButton is deactivated until currency = 0.
+
+    //void UpdatePowerUPButton()
+    //{
+
+    //	// Enable button
+    //	if (m_Currency.currentCurrency >= powerUpCost && !powerUpButton.interactable)
+    //	{
+    //		powerUpButton.interactable = true;
+    //	}
+    //	else if (m_Currency.currentCurrency < powerUpCost && powerUpButton.interactable)
+    //	{
+    //		powerUpButton.interactable = false;
+
+    //	}
+    //}
+
