@@ -67,10 +67,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114139210239060356, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: deathParticleSystemPrefab
+      value: 
+      objectReference: {fileID: 198059975614214484, guid: 84c6435956eed1142b7335b3d4c8c18a,
+        type: 3}
     - target: {fileID: 114193652483182726, guid: 6206e01c5c2d04db09a117c7c01052ac,
         type: 3}
       propertyPath: initialPoolCapacity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536486880056996, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: damageScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553375644657304, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565515371635964, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: fireRate
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565515371635964, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565515371635964, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: isMultiAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808550217567290, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: configuration.maxHealth
+      value: 1400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808550217567290, guid: 6206e01c5c2d04db09a117c7c01052ac,
+        type: 3}
+      propertyPath: configuration.startingHealth
+      value: 1400
       objectReference: {fileID: 0}
     - target: {fileID: 195757057196411538, guid: 6206e01c5c2d04db09a117c7c01052ac,
         type: 3}
