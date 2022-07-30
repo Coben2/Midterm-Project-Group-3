@@ -72,6 +72,27 @@ PrefabInstance:
       propertyPath: initialPoolCapacity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114425450384307074, guid: 60000d22132204baa9db73f0b0c0d987,
+        type: 3}
+      propertyPath: deathParticleSystemPrefab
+      value: 
+      objectReference: {fileID: 198059975614214484, guid: 84c6435956eed1142b7335b3d4c8c18a,
+        type: 3}
+    - target: {fileID: 114809241872749516, guid: 60000d22132204baa9db73f0b0c0d987,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975712440518228, guid: 60000d22132204baa9db73f0b0c0d987,
+        type: 3}
+      propertyPath: configuration.maxHealth
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 114975712440518228, guid: 60000d22132204baa9db73f0b0c0d987,
+        type: 3}
+      propertyPath: configuration.startingHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 195793231520020778, guid: 60000d22132204baa9db73f0b0c0d987,
         type: 3}
       propertyPath: m_Speed
