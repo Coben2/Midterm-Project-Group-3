@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910bcb715cd3344619df786cb0658efb, type: 3}
+  m_Name: Super Hovertank BOSS
+  m_EditorClassIdentifier: 
+  agentName: Super Hovertank
+  agentDescription: Strong, slow. Hefty.
+  agentPrefab: {fileID: 9074921300920927333, guid: e504624b0b9c9ac498fe7517cc8f07be,
+    type: 3}
